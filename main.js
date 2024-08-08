@@ -1,5 +1,7 @@
 const contenidoTienda = document.getElementById('contenidoTienda');
 const contadorCarrito = document.getElementById('contador-carrito');
+const mostrarCarrito = document.getElementById('mostrarCarrito');
+const carritoCompras = document.getElementById('carritoCompras');
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -40,14 +42,9 @@ const pintarProductos = (productos) => {
             guardarStorage();
         })
     })
-
+    
 }
 
-getProducts();
-
-
-const mostrarCarrito = document.getElementById('mostrarCarrito');
-const carritoCompras = document.getElementById('carritoCompras');
 
 const verCarrito = () => {
         mostrarCarrito.innerHTML = '';
@@ -55,18 +52,18 @@ const verCarrito = () => {
         titulo.className = 'tituloCarrito'
         titulo.innerText = 'CARRITO:'
         mostrarCarrito.append(titulo);
-    
+        
         carrito.forEach((prod) => {
             let content = document.createElement('div');
             content.className = 'contentCarrito'
             content.innerHTML = `
-                <img class="imagenesCarrito" src='${prod.img}'>
-                <h2>${prod.nombre}</h2>
-                <p>$ ${prod.precio}</p>
-                <button> 🗑️ </button>
+            <img class="imagenesCarrito" src='${prod.img}'>
+            <h2>${prod.nombre}</h2>
+            <p>$ ${prod.precio}</p>
+            <button> 🗑️ </button>
             `
             mostrarCarrito.append(content);
-
+            
             
             
             let eliminar = content.querySelector('button');
@@ -83,12 +80,12 @@ const verCarrito = () => {
         totalCompra.className = 'totalCompra'
         totalCompra.innerHTML =` Precio total: $ ${total} `
         mostrarCarrito.append(totalCompra);
-
+        
         let finalizarCompra = document.createElement('button')
         finalizarCompra.className = 'button';
         finalizarCompra.innerHTML = 'COMPRAR';
         mostrarCarrito.append(finalizarCompra);
-
+        
         finalizarCompra.addEventListener('click', () => {
             carrito = [];
             verCarrito();
@@ -97,19 +94,19 @@ const verCarrito = () => {
                 title: "Su compra se ha realizado con exito!",
                 text: "Muchas gracias por confiar en nosotros.",
                 icon: "success"
-                });
+            });
         })
     }
     
     carritoCompras.addEventListener('click', verCarrito);
     
-
-const eliminarProducto = (prodId) => {
-    const idCarrito = carrito.find((prod) => prod.id === prodId);
-    carrito = carrito.filter((carritoId) => {
-        return carritoId !== idCarrito;
-    })
-    console.log(carrito);
+    
+    const eliminarProducto = (prodId) => {
+        const idCarrito = carrito.find((prod) => prod.id === prodId);
+        carrito = carrito.filter((carritoId) => {
+            return carritoId !== idCarrito;
+        })
+        console.log(carrito);
     verCarrito();
     guardarStorage();
 }
@@ -117,3 +114,4 @@ const eliminarProducto = (prodId) => {
 const guardarStorage = () => {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
+getProducts();
