@@ -1,5 +1,5 @@
 const getProducts = () => {
-    fetch('/productos.json')
+    fetch('./productos.json')
     .then((res) => res.json())
     .then((productos) => {
         pintarProductos(productos);
