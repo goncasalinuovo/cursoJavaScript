@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mocka italiana",
+        "precio": 55000,
+        "origen": "Italia",
+        "img": "./assets/mocka.webp",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Prensa Francesa",
+        "precio": 60000,
+        "origen": "Francia",
+        "img": "./assets/prensa-francesa.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Aeropress",
+        "precio": 45000,
+        "origen": "Estados Unidos", 
+        "img": "./assets/aeropress.webp",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Cezve",
+        "precio": 32000,
+        "origen": "Turquia",
+        "img": "./assets/cezve.webp",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Chemex",
+        "precio": 115000,
+        "origen": "Estados Unidos",
+        "img": "./assets/chemex.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Sifon",
+        "precio": 150000,
+        "origen": "Alemania",
+        "img": "./assets/sifon.jpg",
+        "cantidad": 1
+    }
+]

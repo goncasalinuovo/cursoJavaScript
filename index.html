@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Tienda de Cafe</title>
+</head>
+<body>
+        <div>
+            <nav class="nav-content"> 
+                <h1>Tienda de Cafe</h1>
+                <a href="#mostrarCarrito"><img src="./assets/carrito.png" alt="carrito" class="carrito-compras" id="carritoCompras"><span id="contador-carrito"></span></a>
+            </nav>
+        </div>
+    
+    <div id="contenidoTienda" class="contenido-tienda"></div>
+
+    <div id="mostrarCarrito" class="mostrar-carrito"></div>
+    
+    <script src="getProducts.js"></script>
+    <script src="./main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

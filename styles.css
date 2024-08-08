@@ -1,0 +1,84 @@
+html {
+    font-size: 62,5%;
+}
+
+body{
+    background-image: url(assets/fondo-cafe.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+h1{
+    text-align: center;
+}
+.contenido-tienda{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+}
+
+.button{
+    width: 100%;
+    padding: 0.7rem;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(234, 210, 187, 0.9);
+    border-radius: 0.5rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+    height: 12rem;
+    padding-top: 1rem;
+} 
+.nav-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: antiquewhite;
+}
+.carrito-compras{
+    width: 10%;
+}
+.contentCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+.imagenesCarrito{
+    height: 4rem;
+}
+.totalCompra{
+    text-align: right;
+    padding-right: 9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.tituloCarrito{
+    text-align: center;
+    padding-top: 1.5rem;
+}
+.mostrar-carrito{
+    margin: 5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    background-color: rgba(234, 210, 187, 0.9);
+    border-radius: 0.5rem;
+}
